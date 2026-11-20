@@ -1,6 +1,6 @@
 # ValorantReplayParser CN
 
-国服 VALORANT `.vrf` 回放解析器的实验性适配，基于 [michel-giehl/ValorantReplayParser](https://github.com/michel-giehl/ValorantReplayParser)。上游固定提交为 `157f376b26bedc58e996b8bd9d3ea50adeac5aaa`。
+国服 VALORANT 13.10 `.vrf` 通用回放解析器，基于 [michel-giehl/ValorantReplayParser](https://github.com/michel-giehl/ValorantReplayParser)。上游固定提交为 `157f376b26bedc58e996b8bd9d3ea50adeac5aaa`。
 
 本项目增加 `++Ares-Core+release-china-13.10` 属性块转换，以及 13.10 战报、伤害和临时阵亡参数布局。转换直接加入默认注册表。国服 13.09 与上游已有分支的实现继续保留。
 
@@ -21,9 +21,7 @@ dotnet run --project src/CliReader -c Release --no-build -- export "C:/replays/m
 
 ## 支持范围
 
-国服 13.10 转换已在本地授权的三份极速模式回放中完整遍历。定向探针选择星礈和钢锁相关类型，9445 条目标属性更新中 9280 条完整解码，236 条目标 RPC 中 165 条完整解码。这些数字是指定类型的检查结果。实验性 API 和技能类型化覆盖仍在完善。
-
-测试包含国服转换的合成固定回归向量、错误输入和地区/版本精确注册检查。合成向量使用公开字节输入，根据恢复的转换公式独立计算，未标为客户端原生输出。原始私人回放和完整解码不会随仓库分发。
+支持国服无畏契约 13.10 VRF 回放读取、字段解析和 JSON/NDJSON 数据导出，可通过命令行或 .NET 库接入使用。
 
 ## 来源与许可
 
