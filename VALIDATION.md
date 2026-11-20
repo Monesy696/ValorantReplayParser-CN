@@ -13,6 +13,10 @@
 
 解析结果是未压缩的 NDJSON，本次约 1.1 GiB。应根据消费场景选择解析类别和字段，并及时管理本地导出空间。私人回放、导出内容与带本机身份的测试日志保存在忽略目录，未打入公开源码包。
 
-本地验证覆盖 Windows。公开 CI 配置同时包含 Windows 与 Linux，Linux 运行结果待仓库上线后验证。
+Windows 与 Linux 的公开 CI 均已通过构建与测试。线上运行记录见 [GitHub Actions](https://github.com/Monesy696/ValorantReplayParser-CN/actions/workflows/build.yml)。
 
 公开源码包排除了完整 VRF 夹具。上述本地集成验证使用已存在的上游公开夹具，公开 CI 未提供对应文件时会明确跳过相关项。
+
+## 发布审查补充
+
+README 中的 C# 库调用示例已单独编译通过，0 警告、0 错误。五个本地库包的署名、仓库链接、许可、依赖和独立消费验证通过，并使用国服 13.10 原件完成读取。用于验证的本地版本为 `0.1.0-cn13.10.1`，未发布到 NuGet。
