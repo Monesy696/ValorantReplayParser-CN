@@ -34,3 +34,5 @@ dotnet run --project src/CliReader -c Release --no-build -- export "C:/replays/m
 ## 验证记录
 
 完整独立构建、测试和真实原件 CLI 导出结果见 [VALIDATION.md](VALIDATION.md)。上游包名保留用于源码与包测试兼容，当前适配版本以源码构建使用。
+
+公开仓库仅发布源码和合成测试。完整 VRF 测试夹具不随包分发，需回放文件的集成测试在文件缺失时明确跳过。使用自己有权处理的本地回放补充验证。
